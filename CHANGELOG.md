@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/ruslan-mart/react-drag/compare/v1.0.2...v1.0.3) (2022-07-17)
+
+
+### Bug Fixes
+
+* 🐛 Caching an old build ([d50eff7](https://github.com/ruslan-mart/react-drag/commit/d50eff777e83396cc66c6d72a5cdfe2c9cf4a48c))
+
 ## [1.0.2](https://github.com/ruslan-mart/react-drag/compare/v1.0.1...v1.0.2) (2022-07-17)
 
 

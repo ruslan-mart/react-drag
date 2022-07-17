@@ -1,6 +1,6 @@
 {
   "name": "@martdev/react-drag",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Ruslan Martynov",
   "license": "MIT",
   "description": "React draggable component and React drag hook",

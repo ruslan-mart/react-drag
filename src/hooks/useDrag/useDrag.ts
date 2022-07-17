@@ -100,7 +100,8 @@ export const useDrag = (props: UseDragProps): UseDragResult => {
           }
         }
 
-        window.requestAnimationFrame(updateDOM);
+        window.requestAnimationFrame(removeSelection);
+        window.requestAnimationFrame(updateStyleValues);
       },
 
       start(event, coords) {
@@ -125,7 +126,6 @@ export const useDrag = (props: UseDragProps): UseDragResult => {
             startX = clientX;
             startY = clientY;
 
-            event.preventDefault();
             return true;
           }
         }
@@ -190,7 +190,11 @@ export const useDrag = (props: UseDragProps): UseDragResult => {
       document.removeEventListener('touchend', listeners.touchEnd);
     };
 
-    const updateDOM = () => {
+    const removeSelection = () => {
+      window.getSelection()?.removeAllRanges();
+    };
+
+    const updateStyleValues = () => {
       containerNode.style.left = `${currentX}px`;
       containerNode.style.top = `${currentY}px`;
     };

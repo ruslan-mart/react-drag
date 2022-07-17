@@ -15,7 +15,7 @@ export type DragCoords = [number, number];
  * @param nativeEvent a native event's object that is initialized after completion of `MouseEvent` or `TouchEvent` (depending on device's type). It should be used with caution. If you need to get `MouseEvent`'s props, you better specify condition `nativeEvent.type.startsWith('mouse')`.
  * @returns void — the event will be executed with default values.
  * @returns false — use this if you need to abort the element's «dragging».
- * @return newCoords — an array of two numeric values (`x`, `y`), and those contain new values for element's position.
+ * @returns newCoords — an array of two numeric values (`x`, `y`), and those contain new values for element's position.
  */
 export type DragEventHandler = DragBaseEventHandler<void | boolean | DragCoords>;
 

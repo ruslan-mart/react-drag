@@ -65,7 +65,8 @@ export var useDrag = function (props) {
                         currentY = Number(handlerValue[1]) || 0;
                     }
                 }
-                window.requestAnimationFrame(updateDOM);
+                window.requestAnimationFrame(removeSelection);
+                window.requestAnimationFrame(updateStyleValues);
             },
             start: function (event, coords) {
                 var _a;
@@ -78,7 +79,6 @@ export var useDrag = function (props) {
                         _a = parseInitialCoords(containerNode), initialX = _a[0], initialY = _a[1];
                         startX = clientX;
                         startY = clientY;
-                        event.preventDefault();
                         return true;
                     }
                 }
@@ -127,7 +127,11 @@ export var useDrag = function (props) {
             document.removeEventListener('touchmove', listeners.touchMove);
             document.removeEventListener('touchend', listeners.touchEnd);
         };
-        var updateDOM = function () {
+        var removeSelection = function () {
+            var _a;
+            (_a = window.getSelection()) === null || _a === void 0 ? void 0 : _a.removeAllRanges();
+        };
+        var updateStyleValues = function () {
             containerNode.style.left = "".concat(currentX, "px");
             containerNode.style.top = "".concat(currentY, "px");
         };

@@ -60,7 +60,9 @@
     "react": ">= 16.8.0",
     "react-dom": ">= 16.8.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "tslib": "^2.4.0"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",

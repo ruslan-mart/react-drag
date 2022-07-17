@@ -19,6 +19,9 @@
     <a href="https://www.npmjs.com/package/@martdev/react-drag">
        <img src="https://img.shields.io/npm/v/@martdev/react-drag.svg" alt="npm package" />
     </a>
+    <a href="https://www.npmjs.com/package/@martdev/react-drag">
+       <img src="https://img.shields.io/npm/dy/@martdev/react-drag" alt="npm package" />
+    </a>
   </sup>
 </p>
 
@@ -280,6 +283,8 @@ A classic example without using `<Target>` and `<NotTarget>`.
 
 There will be a small blue square that you can «drag» across the whole page.
 
+[Watch demo](https://codepen.io/ruslan-mart/pen/YzaNxvx)
+
 ```css
 .box {
   background-color: #a9def9;
@@ -303,6 +308,8 @@ const App = () => {
 Example with using `disabled` prop.
 
 In 10 seconds after the square is displayed, «dragging» will be disabled.
+
+[Watch demo](https://codepen.io/ruslan-mart/pen/JjLEyzE)
 
 ```css
 .box {
@@ -335,6 +342,8 @@ Usage `<Target>` as the target element of «dragging».
 
 In this example, «dragging» is possible only outside the «pink area».
 
+[Watch demo](https://codepen.io/ruslan-mart/pen/vYRgJPp)
+
 ```css
 .box {
   background-color: #a9def9;
@@ -364,6 +373,8 @@ const App = () => {
 Using three `<Target>` as the target element of «dragging».
 
 In this example, «dragging» is possible only outside the «pink area».
+
+[Watch demo](https://codepen.io/ruslan-mart/pen/ZExLJZY)
 
 ```css
 .box {
@@ -400,6 +411,8 @@ Using `<Target>` as a text that will be the target of «dragging».
 
 In this example, «dragging» is possible only after the word **«world»**.
 
+[Watch demo](https://codepen.io/ruslan-mart/pen/GRxrvLd)
+
 ```css
 .text {
   color: #333333;
@@ -426,6 +439,8 @@ Using `<NotTarget>` for ignoring the «dragging».
 
 In this example, «dragging» outside the «green area» is impossible.
 
+[Watch demo](https://codepen.io/ruslan-mart/pen/WNzREWm)
+
 ```css
 .box {
   background-color: #a9def9;
@@ -440,6 +455,7 @@ In this example, «dragging» outside the «green area» is impossible.
 }
 
 .not-target {
+  background-color: #d0f4de;
   height: 30px;
   margin-left: auto;
   width: 30px;
@@ -463,6 +479,8 @@ const App = () => {
 Use an event handler `onDrag` to limit «dragging» on the area.
 
 In this example, «dragging» is possible only within the browser's window.
+
+[Watch demo](https://codepen.io/ruslan-mart/pen/gOegxJj)
 
 ```css
 .box {
@@ -502,6 +520,8 @@ const App = () => {
 Use event handlers `onDragStart` and `onDragEnd` for determine status.
 
 In this example, by «dragging» the element will change its color because of adding/deleting additional CSS-class.
+
+[Watch demo](https://codepen.io/ruslan-mart/pen/rNdjzEx)
 
 ```css
 .box {
@@ -546,6 +566,8 @@ Using `useDrag` hook to give the user possibility to «drag» the element.
 In this example, «dragging» is possible only outside the «pink area».
 
 If the status changes, its value is displayed in console.
+
+[Watch demo](https://codepen.io/ruslan-mart/pen/vYRgJqd)
 
 ```css
 .box {

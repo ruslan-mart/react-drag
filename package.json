@@ -59,7 +59,8 @@
     "react-dom": ">= 16.8.0"
   },
   "dependencies": {
-    "tslib": "^2.4.0"
+    "tslib": "^2.4.0",
+    "use-global-style": "^1.0.1"
   },
   "husky": {
     "hooks": {

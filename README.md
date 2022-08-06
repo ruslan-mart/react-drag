@@ -20,14 +20,18 @@
        <img src="https://img.shields.io/npm/v/@martdev/react-drag.svg" alt="npm package" />
     </a>
     <a href="https://www.npmjs.com/package/@martdev/react-drag">
-       <img src="https://img.shields.io/npm/dy/@martdev/react-drag" alt="npm package" />
+       <img src="https://img.shields.io/npm/dw/@martdev/react-drag" alt="npm package" />
     </a>
   </sup>
 </p>
 
+---
+
 ## Description
 
 This library will help you make your elements draggable inside React.
+
+---
 
 ## Installation
 
@@ -41,6 +45,7 @@ or yarn
 yarn add @martdev/react-drag
 ```
 
+---
 
 ## Syntax
 
@@ -48,6 +53,7 @@ yarn add @martdev/react-drag
 ```tsx
 draggableProps = {
   as?: keyof JSX.IntrinsicElements = 'div',
+  disabled?: boolean = false,
   onDragStart?: (coords, nativeEvent) => boolean | void,
   onDrag?: (coords, nativeEvent) => boolean | newCoods | void,
   onDragEnd?: (coords, nativeEvent) => void,
@@ -71,6 +77,8 @@ notTargetProps = {
 </Draggable>
 ```
 
+---
+
 ### React Hook
 
 ```ts
@@ -85,13 +93,15 @@ notTargetProps = {
 })
 ```
 
+---
+
 ## API
 
 ### `<Draggable>` component
 
 It is a container component that will be «draggable».
 
-[See examples](#draggable-usage)
+[See example](#draggable-usage)
 
 #### `DraggableProps` properties (props)
 
@@ -150,6 +160,8 @@ Return value variants:
 + _`void`_ — the event will be executed with default values.
 + _there are no more value options available_
 
+---
+
 ### `<Target>` component
 
 A component that is a target area for «dragging» the container.
@@ -158,7 +170,7 @@ If this component does not exist, then «the target» is the container itself.
 
 Use this component only inside `<Draggable>`, or else the error will happen.
 
-[See examples](#target-usage)
+[See example](#target-usage)
 
 #### `TargetProps` properties
 
@@ -172,6 +184,8 @@ Optional prop that sets an element type (`div`, `span`, `img`, etc.).
 
 Default value: `"div"`
 
+---
+
 ### `<NotTarget>` component
 
 This component is the exact opposite of `<Target>` component.
@@ -180,7 +194,7 @@ The main goal of this component is to give opportunity to ignore the container �
 
 Use this component only inside `<Draggable>` or `<Target>`, or else the error will happen.
 
-[See examples](#nottarget-usage)
+[See example](#nottarget-usage)
 
 #### `NotTargetProps` properties
 
@@ -194,13 +208,15 @@ Optional prop that sets an element type (`div`, `span`, `img`, etc.).
 
 Default value: `"div"`
 
+---
+
 ### `useDrag` hook
 
 This hook will give you opportunity to use the element's «dragging» without usage of integral components.
 
 Use this hook if you want to interact with elements directly and if there is not enough functionality for integral components usage.
 
-[See examples](#usedrag-usage)
+[See example](#usedrag-usage)
 
 #### `UseDragProps`
 
@@ -275,6 +291,8 @@ Return value variants/options:
 + _`void`_ — the event will be executed with default values.
 + _there are no more value options available_
 
+---
+
 ## Examples
 
 ### `<Draggable>` usage
@@ -302,6 +320,7 @@ const App = () => {
 };
 ```
 
+---
 
 ### `disabled` usage
 
@@ -325,7 +344,7 @@ const App = () => {
   const [disabled, setDisabled] = useState(false);
   
   useEffect(() => {
-    window.setInterval(() => {
+    window.setTimeout(() => {
       setDisabled(true);
     }, 10000);
   }, []);
@@ -335,6 +354,8 @@ const App = () => {
   );
 };
 ```
+
+---
 
 ### `<Target>` usage
 
@@ -367,6 +388,8 @@ const App = () => {
   );
 };
 ```
+
+---
 
 ### Multiple `<Target>` usage
 
@@ -405,6 +428,8 @@ const App = () => {
 };
 ```
 
+---
+
 ### `<Target>` as a text
 
 Using `<Target>` as a text that will be the target of «dragging».
@@ -432,6 +457,8 @@ const App = () => {
   );
 };
 ```
+
+---
 
 ### `<NotTarget>` usage
 
@@ -474,6 +501,8 @@ const App = () => {
 };
 ```
 
+---
+
 ### `onDrag` usage
 
 Use an event handler `onDrag` to limit «dragging» on the area.
@@ -514,6 +543,8 @@ const App = () => {
   );
 };
 ```
+
+---
 
 ### `onDragStart` and `onDragEnd` usage
 
@@ -558,6 +589,8 @@ const App = () => {
   );
 };
 ```
+
+---
 
 ### `useDrag` usage
 
